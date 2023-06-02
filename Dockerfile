@@ -37,7 +37,7 @@ COPY entrypoint.sh .
 RUN chmod +x entrypoint.sh
 
 # # Set the entrypoint to run the scripts
-#ENTRYPOINT ["/app/entrypoint.sh"]
+ENTRYPOINT ["./entrypoint.sh"]
 
 # Run script1 on port 8022
 # CMD ["python", "src/main.py"] #docker change test
