@@ -4,7 +4,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    entrypoint: /app/entrypoint.sh  
+    #entrypoint: /app/entrypoint.sh  
     image: neerajtiwari0007/composertest:0.1
     init: true
     volumes:
