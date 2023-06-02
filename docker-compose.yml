@@ -13,4 +13,14 @@ services:
         target: /app
     ports:
       - "8000:8000"  
+    tty: true
+    stdin_open: true
+    restart: "no"
+
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           capabilities: [gpu]  
 
