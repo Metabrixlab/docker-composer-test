@@ -30,14 +30,14 @@ EXPOSE 8022
 # Expose Port 8021
 EXPOSE 8021
 
-# Copy the entrypoint script to the container
-COPY entrypoint.sh .
+# # Copy the entrypoint script to the container
+# COPY entrypoint.sh .
 
-# Make the entrypoint script executable
-RUN chmod +x entrypoint.sh
+# # Make the entrypoint script executable
+# RUN chmod +x entrypoint.sh
 
-# Set the entrypoint to run the scripts
-ENTRYPOINT ["./entrypoint.sh"]
+# # Set the entrypoint to run the scripts
+# ENTRYPOINT ["./entrypoint.sh"]
 
 # Run script1 on port 8022
 # CMD ["python", "src/main.py"] #docker change test

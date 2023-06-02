@@ -1,15 +1,21 @@
+version: "3"
 services:
   app:
     build:
       context: .
       dockerfile: Dockerfile
-    entrypoint:
-    - sleep
-    - infinity
+
+    entrypoint: /app/entrypoint.sh  
+
     image: neerajtiwari0007/composertest:0.1
+
     init: true
+
     volumes:
-    - type: bind
-      source: /var/run/docker.sock
-      target: /var/run/docker.sock
+      - type: bind
+        source: .
+        target: /app
+
+    ports:
+      - "8000:8000"  
 
