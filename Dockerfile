@@ -5,9 +5,9 @@ FROM python:3.8-slim
 WORKDIR /app
 
 # Install system dependencies
-RUN apt-get update && apt-get install -y \
-    libgl1-mesa-glx \
-    && rm -rf /var/lib/apt/lists/*
+# RUN apt-get update && apt-get install -y \
+#     libgl1-mesa-glx \
+#     && rm -rf /var/lib/apt/lists/*
 
 # Copy the requirements.txt file to the container
 COPY requirements.txt .
